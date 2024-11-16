@@ -1,3 +1,19 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+
+import React, { useState, useEffect } from 'react';
+import myAudio from './myAudio.mp3';
+
+function MyComponent() {
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    const audio = new Audio(myAudio);
+    audio.loop = true;
+    audio.play();
+  }, []);
+
+  return
+}
