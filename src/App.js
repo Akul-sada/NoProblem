@@ -50,7 +50,7 @@ function App() {
 
         <button className="close-payment btn" onClick={closeModal}>close</button>
 
-        <img alt="Payment QR Code" style={{maxWidth:'100%'}} src='./image.jpg'/>
+        <img alt="GooglePayNUMBER-9964215560" style={{maxWidth:'100%'}} src='./image.jpg'/>
       </div>
       </Modal>
     </div>
