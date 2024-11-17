@@ -2,13 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import { useState} from 'react';
 import Modal from 'react-modal';
-import sound from './static/sound1.mp3';
 
 
 
-function play(){
-  new Audio(sound).play()
-}
+
+
 function App() {
   const [problemName,setProblemName] = useState("");
   const [personName,setPersonName] = useState("");
@@ -38,7 +36,7 @@ function App() {
     <div className="App">
 
       <header className="App-header">   
-      <button className='hidden' onClick={()=>play()}>Sound</button>
+
               {/* modal code starts */}
       <div>
       <button onClick={openModal} className='green-btn'>Click here to make Payment</button>
