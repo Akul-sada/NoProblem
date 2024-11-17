@@ -6,6 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html{
+    /* font-size: 10px; */
+
+  /* 10px / 16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -15,10 +21,29 @@ code {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* 20px = 2rem */
 }
 .btn{
   padding: 5px;
   border-radius: 8px;
   border-color: 'white';
 }
+input[type=text]{
+  all:unset;
+  border: 2px solid white;
+  border-radius: 4px;
+  /* 4px =.4rem */
+  cursor: pointer;
+}
+input[type=text]::placeholder{
+  color: white;
 
+}
+input[type=submit]{
+  cursor: pointer;
+}
+.hidden{
+  display: none;
+}
+
+@media(max-width:1200px){}
