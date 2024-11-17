@@ -40,6 +40,11 @@ code {
   padding: 5px 4rem;
   width: 35vw;
 }
+.top-green-btn{
+  display: flex;
+  flex-direction: column;
+  /* gap:30px; */
+}
 
 input[type=text]{
   all:unset;

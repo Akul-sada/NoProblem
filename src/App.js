@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import { useState} from 'react';
 import Modal from 'react-modal';
+import sound from './sound1.mp3';
+
 
 
 
@@ -15,6 +17,10 @@ function App() {
   const submitHandler =()=>{
     setPersonName("");
     setProblemName("");
+  }
+  // Audio
+  function play(){
+    new Audio(sound).play();
   }
 
   // modal handlers are below
@@ -39,7 +45,10 @@ function App() {
 
               {/* modal code starts */}
       <div>
-      <button onClick={openModal} className='green-btn'>Click here to make Payment</button>
+      <div className='top-green-btn'>
+        <button onClick={openModal} className='green-btn'>Click here to make Payment</button>
+        <button className='green-btn' onClick={()=>play()}>Play the mantra</button>
+      </div>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -50,7 +59,7 @@ function App() {
 
         <button className="close-payment btn" onClick={closeModal}>close</button>
 
-        <img alt="GooglePayNUMBER-9964215560" style={{maxWidth:'100%'}} src='./image.jpg'/>
+        <img alt="GooglePayNUMBER👉+91-9964215560" style={{maxWidth:'100%'}} src='./image.jpg'/>
       </div>
       </Modal>
     </div>
