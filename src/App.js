@@ -59,7 +59,7 @@ function App() {
         
         <img src={logo} className="App-logo" alt="logo" />
         <form className='form-gap'>
-          <label>Name of the Person 👉
+          <label>Full Name of the Person 👉
           <input required placeholder='example:- Ranveer Singh' style={{marginLeft:'3.2rem'}} type='text' value={personName} onChange={(e)=>setPersonName(e.target.value)}/>
           </label>
           <label>Name of the problem 👉
