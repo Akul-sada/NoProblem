@@ -16,18 +16,13 @@ function App() {
     setProblemName("");
   }
 
-  
 
 
-  
   /*
    Code to install to the mobile device Begins
   */
 
-
-
-
-
+   
 
 
   /*
