@@ -52,8 +52,6 @@ function App() {
     setIsOpen(false);
   }
 
-
-
   return (
     <div className="App">
 
@@ -64,7 +62,7 @@ function App() {
       <div className='top-green-btn'>
         <button onClick={openModal} className='green-btn'>Click here to make Payment</button>
         <button className='green-btn' onClick={()=>play()}>Play the mantra</button>
-     
+         
         <DownloadButton/>
       </div>
       <Modal
