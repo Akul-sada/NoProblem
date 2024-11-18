@@ -20,7 +20,10 @@
   
     <div id="root"></div>
     <script>
-// Disable right-click
+
+      
+// code to dissable inspect element start
+
 document.addEventListener('contextmenu', (e) => e.preventDefault());
 
 function ctrlShiftKey(e, keyCode) {
@@ -36,8 +39,10 @@ document.onkeydown = (e) => {
     ctrlShiftKey(e, 'C') ||
     (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
   )
-    return false;
+  return false;
 };
+
+// code to dissable inspect element ends
 
     </script>
   </body>

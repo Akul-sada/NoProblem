@@ -3,9 +3,7 @@ import './App.css';
 import { useState} from 'react';
 import Modal from 'react-modal';
 import sound from './sound1.mp3';
-
-
-
+import DownloadButton from './DownloadButton';
 
 
 
@@ -13,11 +11,29 @@ function App() {
   const [problemName,setProblemName] = useState("");
   const [personName,setPersonName] = useState("");
 
-  
   const submitHandler =()=>{
     setPersonName("");
     setProblemName("");
   }
+
+  
+
+
+  
+  /*
+   Code to install to the mobile device Begins
+  */
+
+
+
+
+
+
+
+  /*
+   Code to install to the mobile device ends
+  */
+
   // Audio
   function play(){
     new Audio(sound).play();
@@ -48,6 +64,8 @@ function App() {
       <div className='top-green-btn'>
         <button onClick={openModal} className='green-btn'>Click here to make Payment</button>
         <button className='green-btn' onClick={()=>play()}>Play the mantra</button>
+     
+        <DownloadButton/>
       </div>
       <Modal
         isOpen={modalIsOpen}
