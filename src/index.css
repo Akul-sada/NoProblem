@@ -26,6 +26,7 @@ code {
 /* 
 {color:'white',border:'white',cursor:'pointer',background:'green'}
 */
+
 .green-btn{
   padding: 5px;
   border-radius: 8px;
@@ -40,10 +41,11 @@ code {
   padding: 5px 4rem;
   width: 35vw;
 }
+
 .top-green-btn{
   display: flex;
   flex-direction: column;
-  /* gap:30px; */
+  gap:12px;
 }
 
 input[type=text]{
@@ -53,26 +55,33 @@ input[type=text]{
   /* 4px =.4rem */
   cursor: pointer;
 }
+
 input[type=text]::placeholder{
   color: rgba(255, 255, 255, 0.575);
 
 }
+
 input[type=submit]{
   cursor: pointer;
 }
+
 .hidden{
   display: none;
 }
+
 .payment-modal{
   display:flex;
   flex-direction: column;
 }
+
 .close-payment{
   display: inline-block;
 }
+
 .heading{
   font-size: 4rem;
 }
+
 .center{
   margin: 0 auto;
 }
@@ -87,7 +96,6 @@ input[type=submit]{
     font-size: 40%;
   }
 }
-
 @media(max-width:1000px){
   html{
     font-size: 20%;
