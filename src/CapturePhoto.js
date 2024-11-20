@@ -6,7 +6,9 @@ import React, { Children, useState } from 'react';
   setIndex(1);
  } 
 //  Allow photo capture permission from mobile and desktop device.
-// Save the photo in static folder as 
+// Save the photo in static folder 
+// Crop the photo
+
 
 
 const CapturePhoto = () => {

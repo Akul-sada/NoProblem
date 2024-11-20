@@ -17,3 +17,50 @@ function MyComponent() {
 
   return
 }
+
+photo capture permission
+import React, { useState, useEffect } from 'react';
+import { requestPermissions, PERMISSIONS } from 'react-native-permissions'; // For mobile 
+
+function App() {
+  const [hasDesktopPermission, setHasDesktopPermission]  = useState(false);
+  const [hasMobilePermission, setHasMobilePermission] = useState(false);
+
+  useEffect(() => {
+    // Check desktop permission (using the Notification API)
+    if (window.Notification && Notification.permission !== 'granted') {
+      Notification.requestPermission().then(permission => {
+        setHasDesktopPermission(permission === 'granted');
+      });
+    } else {
+      setHasDesktopPermission(true); // Already granted or not supported
+    }
+  }, []);
+
+  const requestMobilePermission = async () => {
+    try {
+      const granted = await requestPermissions([PERMISSIONS.NOTIFICATIONS]);
+      setHasMobilePermission(granted[PERMISSIONS.NOTIFICATIONS] === 'granted');
+    } catch (err) {
+      console.error('Error requesting mobile permission:', err);
+    }
+  };
+
+  const handleRequestPermission = () => {
+    if (!hasDesktopPermission || !hasMobilePermission) {
+      requestMobilePermission(); // Request mobile permission if not already granted
+    }
+  };
+
+  return (
+    <div>
+      {!hasDesktopPermission || !hasMobilePermission ? (
+        <button onClick={handleRequestPermission}>Request Permissions</button>
+      ) : (
+        <p>Permissions granted! You can now access features requiring notifications.</p>
+      )}
+    </div>
+  );
+}
+
+export default App;

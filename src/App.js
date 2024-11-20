@@ -14,6 +14,7 @@ function App() {
   const [personName, setPersonName] = useState("");
 
 
+
   // Implementing collecting and counting IP address of users who are accessing the site starts
 
 
@@ -53,11 +54,12 @@ function App() {
 
 
 
-
+// If the 
   // Audio
   function play() {
     new Audio(sound).play();
-    incrementSoundCount();
+      incrementSoundCount();
+
   }
   // Play count below
   
@@ -83,8 +85,6 @@ function incrementSoundCount(){
   return (
     <div className="App">
       <header className="App-header">
-
-
 
         {/* modal code starts */}
         <div>
@@ -122,7 +122,10 @@ function incrementSoundCount(){
           <label>Name of the problem     👉
             <input required placeholder='example:- Heart or liver' style={{ marginLeft: '2rem' }} type='text' value={problemName} onChange={(e) => setProblemName(e.target.value)} />
           </label>
-          <input className="green-btn center" type='submit' onSubmit={submitHandler} />
+          {/* if increment count is equal to 0 activate te button or remove disabled */}
+
+          {soundCount < 0 && <input className="green-btn center" type='submit' onSubmit={submitHandler} disabled/>}
+          {soundCount === 9 && <input className="green-btn center" type='submit' onSubmit={submitHandler} />}
         </form>
         <p style={{ color: 'yellow', fontSize: '3rem', margin: 0 }}>
           {personName} donot have {problemName} related problem.
