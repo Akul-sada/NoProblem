@@ -63,6 +63,7 @@ input[type=text]{
   border-radius: .4rem;
   /* 4px =.4rem */
   cursor: text;
+  width:39rem;
 }
 
 input[type=text]::placeholder{
