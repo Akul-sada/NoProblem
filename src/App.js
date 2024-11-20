@@ -128,7 +128,7 @@ function incrementSoundCount(){
           {soundCount === 9 && <input className="green-btn center" type='submit' onSubmit={submitHandler} />}
         </form>
         <p style={{ color: 'yellow', fontSize: '3rem', margin: 0 }}>
-          {personName} is free from {problemName} and related problems.
+        {personName} is free from {problemName} problems and all related issues.
         </p>
       </header>
     </div>
