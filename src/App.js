@@ -3,6 +3,8 @@ import './App.css';
 import { useState } from 'react';
 import Modal from 'react-modal';
 import sound from './sound1.mp3';
+import WebCamCapture from './WebCamCapture';
+
 
 
 
@@ -11,10 +13,24 @@ function App() {
   const [problemName, setProblemName] = useState("");
   const [personName, setPersonName] = useState("");
 
+
+  // Implementing collecting and counting IP address of users who are accessing the site starts
+
+
+
+
+  // Implementing collecting and counting IP address of the users who are accessing the site ends 
+
+
   const submitHandler = () => {
     setPersonName("");
     setProblemName("");
   }
+
+  /*
+    Code to prevent double click below
+  */ 
+  // const onPreventDoubleClick  = debounce(onClick,300);
 
   /*
    Code to install to the mobile device Begins
@@ -24,10 +40,32 @@ function App() {
    Code to install to the mobile device ends
   */
 
+  /*
+    Code to take photograph of the user and Replace it with React logo starts
+  */
+  // Take a photograph of the user from users camera starts
+
+    
+
+  /*
+    Code to take photograph of the user and Replace it with React logo starts
+  */ 
+
+
+
+
   // Audio
   function play() {
     new Audio(sound).play();
+    incrementSoundCount();
   }
+  // Play count below
+  
+const [soundCount,setSoundCount] = useState(0);
+  
+function incrementSoundCount(){
+  setSoundCount(soundCount+1);
+}
 
   // modal handlers are below
 
@@ -46,11 +84,15 @@ function App() {
     <div className="App">
       <header className="App-header">
 
+
+
         {/* modal code starts */}
         <div>
           <div className='top-green-btn'>
+          
             <button onClick={openModal} className='green-btn'>Click here to make Payment</button>
-            <button className='green-btn' onClick={() => play()}>Play the mantra</button>
+            <button className='green-btn' onClick={() => play()} >Play the mantra</button>
+            <span style={{color:'yellow'}}>{soundCount}</span>
           </div>
           <Modal
             isOpen={modalIsOpen}
@@ -83,11 +125,12 @@ function App() {
           <input className="green-btn center" type='submit' onSubmit={submitHandler} />
         </form>
         <p style={{ color: 'yellow', fontSize: '3rem', margin: 0 }}>
-          {personName} donot have {problemName} problem.
+          {personName} donot have {problemName} related problem.
         </p>
       </header>
     </div>
   );
 }
+
 
 export default App;

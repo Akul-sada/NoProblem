@@ -17,6 +17,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ /* Cam photo image */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
 .form-gap{
   display: flex;
   flex-direction: column;
@@ -44,7 +53,7 @@ code {
 
 .top-green-btn{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap:12px;
 }
 
