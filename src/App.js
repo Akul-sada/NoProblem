@@ -112,7 +112,7 @@ function incrementSoundCount(){
         {/* Modal code ends */}
 
 
-        <h1 className='heading'>Fill in the form play the mantra 9 times and your problem will be solved.</h1>
+        <h1 className='heading'>Fill in the form first then play the mantra 9 times then click on submit and your problem will be solved.</h1>
 
         <img src={logo} className="App-logo" alt="logo" />
         <form className='form-gap'>
