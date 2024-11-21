@@ -140,10 +140,13 @@ header{
   input[type=text]{
     width: 90rem;
   }
-  .App-header{
+  .App-header {
     height: 700px;
-  }
+}
   .App{
     padding: 0 0;
+  }
+  .problem-statement{
+    font-size: 2rem;
   }
 }

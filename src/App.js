@@ -141,7 +141,7 @@ function App() {
         {personName} is free from {problemName} problems and all related issues.
         </p> */}
         <p className='problem-statement'>
-          {personName} donot have {problemName} problem and all the related issues.
+          {personName} donot have {problemName}-related problems.
         </p>
       </header>
     </div>
