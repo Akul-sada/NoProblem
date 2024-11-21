@@ -3,6 +3,8 @@ import './App.css';
 import { useState } from 'react';
 import Modal from 'react-modal';
 import sound from './sound1.mp3';
+// import { initializeApp } from 'firebase/app';
+
 // import WebCamCapture from './WebCamCapture';
 
 
@@ -27,10 +29,14 @@ function App() {
     setPersonName("");
     setProblemName("");
   }
+  // collect Ip host and hostname
+  // const host = window.location.host;
+  // const hostname= window.location.hostname;
+  // console.log(window.location);
 
   /*
     Code to prevent double click below
-  */ 
+  */
   // const onPreventDoubleClick  = debounce(onClick,300);
 
   /*
@@ -46,28 +52,28 @@ function App() {
   */
   // Take a photograph of the user from users camera starts
 
-    
+
 
   /*
     Code to take photograph of the user and Replace it with React logo starts
-  */ 
+  */
 
 
 
-// If the 
+  // If the 
   // Audio
   function play() {
     new Audio(sound).play();
-      incrementSoundCount();
+    incrementSoundCount();
 
   }
   // Play count below
-  
-const [soundCount,setSoundCount] = useState(0);
-  
-function incrementSoundCount(){
-  setSoundCount(soundCount+1);
-}
+
+  const [soundCount, setSoundCount] = useState(0);
+
+  function incrementSoundCount() {
+    setSoundCount(soundCount + 1);
+  }
 
   // modal handlers are below
 
@@ -89,10 +95,10 @@ function incrementSoundCount(){
         {/* modal code starts */}
         <div>
           <div className='top-green-btn'>
-          
+
             <button onClick={openModal} className='green-btn'>Click here to make Payment</button>
             <button className='green-btn' onClick={() => play()} >Play the mantra</button>
-            <span style={{color:'yellow'}}>{soundCount}</span>
+            <span style={{ color: 'yellow' }}>{soundCount}</span>
           </div>
           <Modal
             isOpen={modalIsOpen}
@@ -116,19 +122,26 @@ function incrementSoundCount(){
 
         <img src={logo} className="App-logo" alt="logo" />
         <form className='form-gap'>
-          <label>Full Name of the Person 👉
-            <input required placeholder='example:- Ranveer Singh' style={{ marginLeft: '3.2rem' }} type='text' value={personName} onChange={(e) => setPersonName(e.target.value)} />
-          </label>
-          <label>Name of the problem     👉
-            <input required placeholder='example:- Heart or liver' style={{ marginLeft: '2rem' }} type='text' value={problemName} onChange={(e) => setProblemName(e.target.value)} />
-          </label>
+          <div className='form-controls'>
+            <label name='person'>Full Name of the Person
+            </label>
+            <input id='person' required placeholder='example:- Ranveer Singh' style={{ marginLeft: '3.2rem' }} type='text' value={personName} onChange={(e) => setPersonName(e.target.value)} />
+          </ div>
+          <div className='form-controls'>
+            <label name='person'>Name of the problem
+            </label>
+            <input required id='person' placeholder='example:- Heart or liver' style={{ marginLeft: '2rem' }} type='text' value={problemName} onChange={(e) => setProblemName(e.target.value)} />
+          </div>
           {/* if increment count is equal to 0 activate te button or remove disabled */}
 
-          {soundCount < 0 && <input className="green-btn center" type='submit' onSubmit={submitHandler} disabled/>}
+          {soundCount < 0 && <input className="green-btn center" type='submit' onSubmit={submitHandler} disabled />}
           {soundCount === 9 && <input className="green-btn center" type='submit' onSubmit={submitHandler} />}
         </form>
-        <p style={{ color: 'yellow', fontSize: '3rem', margin: 0 }}>
+        {/* <p style={{ color: 'yellow', fontSize: '3rem', margin: 0 }}>
         {personName} is free from {problemName} problems and all related issues.
+        </p> */}
+        <p className='problem-statement'>
+          {personName} donot have {problemName} problem and all the related issues.
         </p>
       </header>
     </div>

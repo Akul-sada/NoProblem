@@ -96,6 +96,19 @@ input[type=submit]{
   margin: 0 auto;
 }
 
+.problem-statement{
+  color: yellow;
+  font-size: 3rem;
+  margin: 0;
+}
+.form-controls{
+  display: flex;
+  
+}
+header{
+  height: 100vh;
+}
+
 @media(max-width:1030px){
   html{
     font-size: 60%;
@@ -106,8 +119,31 @@ input[type=submit]{
     font-size: 40%;
   }
 }
-@media(max-width:1000px){
+@media(max-width:500px){
   html{
     font-size: 20%;
+  }
+  .form-controls{
+    flex-direction: column;
+  }
+  input[type=text]{
+    width: 90rem;
+  }
+}
+@media(max-width:300px){
+  html{
+    font-size: 30%;
+  } 
+  .form-controls{
+    flex-direction: column;
+  }
+  input[type=text]{
+    width: 90rem;
+  }
+  .App-header{
+    height: 700px;
+  }
+  .App{
+    padding: 0 0;
   }
 }
