@@ -111,7 +111,8 @@ function App() {
 
               <button className="close-payment btn" onClick={closeModal}>close</button>
 
-              <img alt="GooglePayNUMBER👉+91-9964215560" style={{ maxWidth: '100%' }} src='./image.jpg' />
+              <h2>GooglePayNUMBER👉 +91-9964215560</h2>
+              <img alt="GooglePayNUMBER👉+91-9964215560" style={{ maxWidth: '30%' }} src='./image.jpg' />
             </div>
           </Modal>
         </div>
