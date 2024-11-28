@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import Modal from 'react-modal';
 import sound from './sound1.mp3';
+
 // import { initializeApp } from 'firebase/app';
 
 // import WebCamCapture from './WebCamCapture';
@@ -128,9 +129,9 @@ function App() {
             <input id='person' required placeholder='example:- Ranveer Singh' style={{ marginLeft: '3.2rem' }} type='text' value={personName} onChange={(e) => setPersonName(e.target.value)} />
           </ div>
           <div className='form-controls'>
-            <label name='person'>Name of the problem
+            <label name='problem'>Name of the problem
             </label>
-            <input required id='person' placeholder='example:- Heart or liver' style={{ marginLeft: '2rem' }} type='text' value={problemName} onChange={(e) => setProblemName(e.target.value)} />
+            <input spellCheck="true" required id='problem' placeholder='example:- Heart or liver' style={{ marginLeft: '2rem' }} type='text' value={problemName} onChange={(e) => setProblemName(e.target.value)} />
           </div>
           {/* if increment count is equal to 0 activate te button or remove disabled */}
 
@@ -141,7 +142,7 @@ function App() {
         {personName} is free from {problemName} problems and all related issues.
         </p> */}
         <p className='problem-statement'>
-          {personName} donot have {problemName} problem.
+          I {personName} do not have {problemName} problem.
         </p>
       </header>
     </div>
