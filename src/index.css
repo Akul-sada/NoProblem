@@ -129,6 +129,9 @@ header{
   input[type=text]{
     width: 90rem;
   }
+  .problem-statement{
+    font-size: 2rem;
+  }
 }
 @media(max-width:300px){
   html{
