@@ -135,14 +135,14 @@ function App() {
           </div>
           {/* if increment count is equal to 0 activate te button or remove disabled */}
 
-          {soundCount < 0 && <input className="green-btn center" type='submit' onSubmit={submitHandler} disabled />}
-          {soundCount === 9 && <input className="green-btn center" type='submit' onSubmit={submitHandler} />}
+          {soundCount >= 9 && <input className="green-btn center" type='submit' onSubmit={submitHandler}/>}
+          
         </form>
         {/* <p style={{ color: 'yellow', fontSize: '3rem', margin: 0 }}>
         {personName} is free from {problemName} problems and all related issues.
         </p> */}
         <p className='problem-statement'>
-          I {personName} do not have {problemName} problem.
+          I, {personName} do not have {problemName} problem.
         </p>
       </header>
     </div>
