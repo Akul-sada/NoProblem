@@ -26,10 +26,10 @@ function App() {
   // Implementing collecting and counting IP address of the users who are accessing the site ends 
 
 
-  const submitHandler = () => {
-    setPersonName("");
-    setProblemName("");
-  }
+  // const submitHandler = () => {
+  //   setPersonName("");
+  //   setProblemName("");
+  // }
   // collect Ip host and hostname
   // const host = window.location.host;
   // const hostname= window.location.hostname;
@@ -88,6 +88,10 @@ function App() {
   function closeModal() {
     setIsOpen(false);
   }
+  // function to reload the page 
+  function reload(){
+    window.location.reload();
+  }
 
   return (
     <div className="App">
@@ -111,14 +115,13 @@ function App() {
 
               <button className="close-payment btn" onClick={closeModal}>close</button>
 
-              <h2>GooglePayNUMBER👉 +91-9964215560</h2>
-              <img alt="GooglePayNUMBER👉+91-9964215560" style={{ maxWidth: '30%' }} src='./image.jpg' />
+              <h2>GooglePayNUMBER👉 +91-9964281778</h2>
+              <img alt="GooglePayNUMBER👉+91-9964281778" style={{ maxWidth: '30%' }} src='./image.jpeg' />
             </div>
           </Modal>
         </div>
 
         {/* Modal code ends */}
-
 
         <h1 className='heading'>Fill in the form first then play the mantra 9 times then click on submit and your problem will be solved.</h1>
 
@@ -136,14 +139,15 @@ function App() {
           </div>
           {/* if increment count is equal to 0 activate te button or remove disabled */}
 
-          {soundCount >= 9 && <input className="green-btn center" type='submit' onSubmit={submitHandler}/>}
+          {/* {soundCount >= 9 && <input className="green-btn center" type='submit' onSubmit={submitHandler}/>} */}
+          <input className="green-btn center" type='submit' onSubmit={reload}/>
           
         </form>
         {/* <p style={{ color: 'yellow', fontSize: '3rem', margin: 0 }}>
         {personName} is free from {problemName} problems and all related issues.
         </p> */}
         <p className='problem-statement'>
-          I, {personName} do not have {problemName} problem.
+          {personName} doesn't have {problemName} problem.
         </p>
       </header>
     </div>
