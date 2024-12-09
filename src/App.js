@@ -130,12 +130,12 @@ function App() {
           <div className='form-controls'>
             <label name='person'>Full Name of the Person
             </label>
-            <input spellCheck="false" id='person' required placeholder='example:- Ranveer Singh' style={{ marginLeft: '3.2rem' }} type='text' value={personName} onChange={(e) => setPersonName(e.target.value)} />
+            <input spellCheck="false" id='person' required placeholder='example:- Mitchell B. Becker' style={{ marginLeft: '3.2rem' }} type='text' value={personName} onChange={(e) => setPersonName(e.target.value)} />
           </ div>
           <div className='form-controls'>
             <label name='problem'>Name of the problem
             </label>
-            <input spellCheck="false" required id='problem' placeholder='example:- Heart or liver' style={{ marginLeft: '2rem' }} type='text' value={problemName} onChange={(e) => setProblemName(e.target.value)} />
+            <input spellCheck="false" required id='problem' placeholder='example:- Financial' style={{ marginLeft: '2rem' }} type='text' value={problemName} onChange={(e) => setProblemName(e.target.value)} />
           </div>
           {/* if increment count is equal to 0 activate te button or remove disabled */}
 
