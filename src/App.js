@@ -130,7 +130,7 @@ function App() {
           <div className='form-controls'>
             <label name='person'>Full Name of the Person
             </label>
-            <input spellCheck="false" id='person' required placeholder='example:- Mitchell B. Becker' style={{ marginLeft: '3.2rem' }} type='text' value={personName} onChange={(e) => setPersonName(e.target.value)} />
+            <input spellCheck="false" id='person' required placeholder='example:- Mitchell B Becker' style={{ marginLeft: '3.2rem' }} type='text' value={personName} onChange={(e) => setPersonName(e.target.value)} />
           </ div>
           <div className='form-controls'>
             <label name='problem'>Name of the problem
