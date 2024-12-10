@@ -101,7 +101,7 @@ function App() {
         <div>
           <div className='top-green-btn'>
 
-            <button onClick={openModal} className='green-btn'>Click here to make Payment</button>
+            <button onClick={openModal} className='green-btn' disabled>Click here to make Payment</button>
             <button className='green-btn' onClick={() => play()} >Play the mantra</button>
             <span style={{ color: 'yellow' }}>{soundCount}</span>
           </div>
